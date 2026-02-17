@@ -2,7 +2,7 @@
 
 Aplicacion de dictado por voz para Windows. Graba audio del microfono, lo envia a Whisper (OpenAI), y escribe el texto donde este el cursor — en cualquier programa. Vive como icono de microfono en el system tray (junto al reloj).
 
-**Autor:** Hector De La Iglesia — delaiglesiahector@gmail.com — www.hectordelaiglesia.com
+**Autor:** Hector de la Iglesia — delaiglesiahector@gmail.com — www.hectordelaiglesia.com
 
 ---
 
