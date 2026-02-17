@@ -1,0 +1,14 @@
+# Configuracion del usuario (contiene API key - NO subir)
+config.json
+
+# Compilacion PyInstaller
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de Windows
+Thumbs.db
+desktop.ini
