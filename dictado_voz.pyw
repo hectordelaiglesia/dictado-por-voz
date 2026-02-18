@@ -432,8 +432,16 @@ def activar_autostart():
         pythonw = "pythonw"
 
     script_path = os.path.abspath(__file__)
+
+    # Si el script esta en una unidad de red (ej: G:\), esperar a que este montada
+    unidad = os.path.splitdrive(script_path)[0]  # "G:" o "C:" etc.
     contenido   = (
         f'@echo off\n'
+        f':esperar\n'
+        f'if not exist "{unidad}\\" (\n'
+        f'    timeout /t 2 /nobreak >nul\n'
+        f'    goto esperar\n'
+        f')\n'
         f'start "" "{pythonw}" "{script_path}"\n'
     )
     os.makedirs(STARTUP_DIR, exist_ok=True)
